@@ -63,8 +63,7 @@ class PropertyRepository implements IPropertyRepository {
   }
 
   async findById(id: string): Promise<Property> {
-    const property = await this.repository.findOne({ id });
-    return property;
+    return this.repository.findOne(id);
   }
 }
 
