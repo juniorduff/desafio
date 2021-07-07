@@ -43,56 +43,31 @@ volumes:
 #ROTAS 
 
 ####Create User /Post
-###http://localhost:3333/user
+###http://localhost:3333/game
 ```
 
 {
-	"fullName":"teste",
-	"email":"junior@teste",
-	"cpf":"kakakk",
-	"password":"1234"
+"name":"teste",
+"description":"teste"	
 }
 ```
 
-####Create Property /Post
+```
+#### GET  list all Game
 ### http://localhost:3333/property
-```
 
 
-{
-	"cep": "5656560",
-	"countRoom":1221,
-	"complement":"testan3223do",
-	"rentValue":21321,
-	"isAvailable": true,
-	"numberProperty":12
+```
 
-}
-```
-#### authenticate 
-
-### http://localhost:3333/sessions
-```
-{
-	"email":"junior@teste",
-	"password":"1234"
-}
-```
-#### GET  list all property
-### http://localhost:3333/property
 ##PUT 
-### http://localhost:3333/property/:id
+### http://localhost:3333/game/:id
 ```
-{
-	
-	"cep": "5656560",
-	"countRoom":1221,
-	"complement":"agoraaaa1",
-	"rentValue":21321,
-	"isAvailable": true,
-	"numberProperty":12
 
+{
+"name":"teste",
+"description":"teste"	
 }
+
 ```
 ##DELETE
-### http://localhost:3333/property/:id
+### http://localhost:3333/game/:id

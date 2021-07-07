@@ -1,16 +1,9 @@
 import { container } from "tsyringe";
 
-import { PropertyRepository } from "@modules/property/infra/typeORM/repositories/PropertyRepository";
-import { IPropertyRepository } from "@modules/property/repositories/IPropertyRepository";
-import { IUsersRepository } from "@modules/usuario/infra/repositories/IUsersRepository";
-import { UsersRepository } from "@modules/usuario/infra/typeORM/repositories/UsersRepository";
+import { GameRepository } from "@modules/game/infra/typeORM/repositories/GameRepository";
+import { IGamesRepository } from "@modules/game/repositories/IGamesRepository";
 
-container.registerSingleton<IUsersRepository>(
-  "UserRepository",
-  UsersRepository
-);
-
-container.registerSingleton<IPropertyRepository>(
+container.registerSingleton<IGamesRepository>(
   "PropertyRepository",
-  PropertyRepository
+  GameRepository
 );
